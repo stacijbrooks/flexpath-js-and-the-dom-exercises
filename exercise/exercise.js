@@ -7,11 +7,11 @@ Select the element with the ID 'main-title' and change its text content
 to "Welcome to the DOM Manipulation Page".
 */
 
-let placeholder = `Delete this 
-									block 
-									and 
-									code 
-									here`;
+// Find the element with id="main-title"
+const mainTitle = document.getElementById("main-title");
+
+//Change the text displayed in that element
+mainTitle.textContent = "Welcome to the DOM Manipulation Page";
 
 console.log("Making a change!");
 
@@ -24,11 +24,11 @@ Use querySelector to select the first <p> element with the
 class 'intro-text' and change its color to blue.
 */
 
-placeholder = `Delete this 
-									block 
-									and 
-									code 
-									here`;
+//Find the first element with class = "intro-text"
+const introText = document.querySelector(".intro-text");
+
+//Change its color to blue
+introText.style.color = "blue";
 
 /*
 Exercise 3: Accessing Multiple Elements with querySelectorAll
@@ -39,11 +39,13 @@ Use querySelectorAll to select all elements with the class 'article-text' and
 set their font size to 18px.
 */
 
-placeholder = `Delete this 
-									block 
-									and 
-									code 
-									here`;
+//Find all elements with class="article-text"
+const articleTexts = document.querySelectorAll(".article-text")
+
+//Loop through each element
+articleTexts.forEach(article => {
+	article.style.fontSize = "18px";
+});
 
 /*
 Exercise 4: Navigating the DOM Tree
